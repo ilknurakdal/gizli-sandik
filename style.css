@@ -83,8 +83,24 @@ background:#ffea00;
 }
 
 #sonuc{
+    margin-top:25px;
+    font-size:22px;
+    font-weight:bold;
+}
 
-margin-top:25px; #sandik{
+#sandik{
+    width:420px;
+    max-width:90%;
+    display:block;
+    margin:0 auto 25px;
+    transition:all 0.6s ease;
+}
+
+#sandik:hover{
+    transform:scale(1.03);
+}
+
+
     width:420px;
     max-width:90%;
     display:block;
