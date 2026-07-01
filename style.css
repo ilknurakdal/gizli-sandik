@@ -84,7 +84,17 @@ background:#ffea00;
 
 #sonuc{
 
-margin-top:25px;
+margin-top:25px; #sandik{
+    width:420px;
+    max-width:90%;
+    display:block;
+    margin:0 auto 25px;
+    transition:all 0.6s ease;
+}
+
+#sandik:hover{
+    transform:scale(1.03);
+}
 
 font-size:22px;
 
