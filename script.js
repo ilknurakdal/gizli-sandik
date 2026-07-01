@@ -1,27 +1,23 @@
 function kontrol(){
 
-let sifre=document.getElementById("sifre").value;
+    let sifre = document.getElementById("sifre").value;
+    let sandik = document.getElementById("sandik");
+    let sonuc = document.getElementById("sonuc");
 
-let sonuc=document.getElementById("sonuc");
+    if(sifre === "1234567"){
 
-if(sifre=="1234567"){
+        sandik.src = "sandik-acik.png";
 
-    document.getElementById("sandik").src="sandik-acik.png";
+        sonuc.style.color = "#7CFC00";
+        sonuc.innerHTML = "🎉 Tebrikler! Gizli Sandık açıldı.";
 
-}
+    }else{
 
-sonuc.style.color="lime";
+        sandik.src = "sandik-kapali.png";
 
-sonuc.innerHTML="🎉 Tebrikler! Sandık açıldı.";
+        sonuc.style.color = "#ff4040";
+        sonuc.innerHTML = "❌ Şifre yanlış.";
 
-}
-
-else{
-
-sonuc.style.color="red";
-
-sonuc.innerHTML="❌ Şifre yanlış.";
-
-}
+    }
 
 }
