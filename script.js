@@ -7,7 +7,11 @@ function kontrol(){
     if(sifre === "1234567"){
 
         sandik.src = "sandik-acik.png";
-
+confetti({
+    particleCount: 250,
+    spread: 180,
+    origin: { y: 0.6 }
+});
         sonuc.style.color = "#7CFC00";
         sonuc.innerHTML = "🎉 Tebrikler! Gizli Sandık açıldı.";
 
