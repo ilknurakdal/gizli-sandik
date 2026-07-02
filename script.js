@@ -17,11 +17,15 @@ confetti({
 
     }else{
 
-        sandik.src = "sandik-kapali.png";
+    sandik.src = "sandik-kapali.png";
 
-        sonuc.style.color = "#ff4040";
-        sonuc.innerHTML = "❌ Şifre yanlış.";
+    sandik.classList.add("salla");
 
-    }
+    setTimeout(function(){
+        sandik.classList.remove("salla");
+    }, 500);
+
+    sonuc.style.color = "#ff4040";
+    sonuc.innerHTML = "❌ Şifre yanlış.";
 
 }
