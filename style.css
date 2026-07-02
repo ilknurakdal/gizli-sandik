@@ -63,3 +63,15 @@ button:hover{
     font-weight:bold;
     margin-top:20px;
 }
+@keyframes sallan {
+  0% { transform: translateX(0); }
+  20% { transform: translateX(-10px); }
+  40% { transform: translateX(10px); }
+  60% { transform: translateX(-8px); }
+  80% { transform: translateX(8px); }
+  100% { transform: translateX(0); }
+}
+
+.salla {
+  animation: sallan 0.5s;
+}
