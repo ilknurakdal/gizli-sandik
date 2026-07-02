@@ -52,17 +52,59 @@ function sertifikayaGec(){
 
 }
 
-// Şimdilik test
+// Sertifika oluştur
 function sertifikaOlustur(){
 
-    let ad = document.getElementById("ad").value;
-    let soyad = document.getElementById("soyad").value;
+    let ad = document.getElementById("ad").value.trim();
+    let soyad = document.getElementById("soyad").value.trim();
 
     if(ad === "" || soyad === ""){
         alert("Lütfen adınızı ve soyadınızı giriniz.");
         return;
     }
 
-    alert(ad + " " + soyad + "\n\nSertifika oluşturma aşamasına geçiyoruz.");
+    const canvas = document.getElementById("sertifikaCanvas");
+    const ctx = canvas.getContext("2d");
+
+    const img = new Image();
+
+    img.src = "assets/sertifika.png";
+
+    img.onload = function(){
+
+        ctx.clearRect(0,0,canvas.width,canvas.height);
+
+        ctx.drawImage(img,0,0,canvas.width,canvas.height);
+
+        // Ad Soyad
+        ctx.font = "bold 88px Georgia";
+        ctx.fillStyle = "#1f365c";
+        ctx.textAlign = "center";
+
+        ctx.fillText(
+            ad + " " + soyad,
+            canvas.width/2,
+            930
+        );
+
+        document.getElementById("sertifikaGoruntusu").style.display = "block";
+        document.getElementById("indirBtn").style.display = "inline-block";
+
+    };
 
 }
+
+// İndir
+document.getElementById("indirBtn").addEventListener("click", function(){
+
+    const canvas = document.getElementById("sertifikaCanvas");
+
+    const link = document.createElement("a");
+
+    link.download = "Basari-Sertifikasi.png";
+
+    link.href = canvas.toDataURL("image/png");
+
+    link.click();
+
+});
