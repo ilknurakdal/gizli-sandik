@@ -18,7 +18,7 @@ confetti({
     }else{
 
     sandik.src = "sandik-kapali.png";
-
+console.log("Salla sınıfı eklendi");
     sandik.classList.add("salla");
 
     setTimeout(function(){
