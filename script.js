@@ -86,7 +86,7 @@ function sertifikaOlustur(){
             canvas.width/2,
             930
         );
-
+        document.getElementById("sertifikaAlani").style.display = "none";
         document.getElementById("sertifikaGoruntusu").style.display = "block";
         document.getElementById("indirBtn").style.display = "inline-block";
 
