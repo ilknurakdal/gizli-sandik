@@ -6,7 +6,7 @@ function kontrol() {
     let kutu = document.getElementById("sifre");
     let buton = document.querySelector("button");
 
-    if (sifre === "1234567") {
+    if (sifre === "3423512") {
 
         sandik.src = "sandik-acik.png";
 
