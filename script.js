@@ -83,18 +83,30 @@ function sertifikaOlustur(){
 
         ctx.fillText(
             ad + " " + soyad,
-            canvas.width/2,
+            canvas.width / 2,
             930
         );
+
+        // Formu gizle
         document.getElementById("sertifikaAlani").style.display = "none";
+
+        // Sertifikayı göster
         document.getElementById("sertifikaGoruntusu").style.display = "block";
+
+        // İndir butonunu göster
         document.getElementById("indirBtn").style.display = "inline-block";
+
+        // Sertifikaya otomatik kaydır
+        document.getElementById("sertifikaGoruntusu").scrollIntoView({
+            behavior: "smooth",
+            block: "start"
+        });
 
     };
 
 }
 
-// İndir
+// PNG İndir
 document.getElementById("indirBtn").addEventListener("click", function(){
 
     const canvas = document.getElementById("sertifikaCanvas");
