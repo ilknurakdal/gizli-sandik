@@ -54,3 +54,26 @@ popup.addEventListener("click", function (event) {
 });
 
 }
+function sertifikayaGec(){
+
+    document.getElementById("tebrikKutusu").style.display = "none";
+
+    document.getElementById("sertifikaAlani").style.display = "block";
+
+}
+
+function sertifikaOlustur(){
+
+    let ad=document.getElementById("ad").value;
+    let soyad=document.getElementById("soyad").value;
+
+    if(ad==="" || soyad===""){
+
+        alert("Lütfen adınızı ve soyadınızı giriniz.");
+        return;
+
+    }
+
+    alert(ad+" "+soyad+"\n\nSertifika bir sonraki adımda oluşturulacak.");
+
+}
