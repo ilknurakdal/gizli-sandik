@@ -35,7 +35,7 @@ function kontrol() {
 
 }
 
-// Kararmış alana tıklayınca popup kapansın
+// Popup dışına tıklayınca kapansın
 document.getElementById("tebrikKutusu").addEventListener("click", function(event){
 
     if(event.target === this){
@@ -73,7 +73,6 @@ function sertifikaOlustur(){
     img.onload = function(){
 
         ctx.clearRect(0,0,canvas.width,canvas.height);
-
         ctx.drawImage(img,0,0,canvas.width,canvas.height);
 
         // Ad Soyad
@@ -87,22 +86,21 @@ function sertifikaOlustur(){
             930
         );
 
-        // ESKİ SAYFAYI TAMAMEN GİZLE
+        // Eski ekranları tamamen gizle
         document.getElementById("anaSayfa").style.display = "none";
         document.getElementById("sertifikaAlani").style.display = "none";
         document.getElementById("tebrikKutusu").style.display = "none";
 
-        // Sertifikayı göster
-        document.getElementById("sertifikaGoruntusu").style.display = "block";
+        // Tam ekran sertifika
+        const alan = document.getElementById("sertifikaGoruntusu");
+        alan.style.display = "block";
+        alan.classList.add("sertifika-tam-ekran");
 
         // İndir butonu
-        document.getElementById("indirBtn").style.display = "inline-block";
+        document.getElementById("indirBtn").style.display = "block";
 
-        // Sayfayı en üste al
-        window.scrollTo({
-            top: 0,
-            behavior: "instant"
-        });
+        // Sayfayı en üste getir
+        window.scrollTo(0,0);
 
     };
 
@@ -116,9 +114,7 @@ document.getElementById("indirBtn").addEventListener("click", function(){
     const link = document.createElement("a");
 
     link.download = "Basari-Sertifikasi.png";
-
     link.href = canvas.toDataURL("image/png");
-
     link.click();
 
 });
