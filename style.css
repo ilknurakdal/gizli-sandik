@@ -183,3 +183,56 @@ opacity:1;
     margin-top:20px;
 
 }
+/* ===========================
+   Tam Ekran Sertifika
+=========================== */
+
+.sertifika-tam-ekran{
+
+    display:none;
+
+    position:fixed;
+
+    inset:0;
+
+    background:#0b132b;
+
+    z-index:9999;
+
+    overflow:auto;
+
+    text-align:center;
+
+    padding:30px;
+
+}
+
+.sertifika-tam-ekran canvas{
+
+    width:100%;
+
+    max-width:1200px;
+
+    height:auto;
+
+    display:block;
+
+    margin:0 auto;
+
+    border-radius:12px;
+
+    box-shadow:0 0 35px rgba(0,0,0,.45);
+
+    background:white;
+
+}
+
+.sertifika-tam-ekran button{
+
+    margin:30px auto 50px;
+
+    font-size:22px;
+
+    padding:15px 40px;
+
+}
