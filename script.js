@@ -87,19 +87,21 @@ function sertifikaOlustur(){
             930
         );
 
-        // Formu gizle
+        // ESKİ SAYFAYI TAMAMEN GİZLE
+        document.getElementById("anaSayfa").style.display = "none";
         document.getElementById("sertifikaAlani").style.display = "none";
+        document.getElementById("tebrikKutusu").style.display = "none";
 
         // Sertifikayı göster
         document.getElementById("sertifikaGoruntusu").style.display = "block";
 
-        // İndir butonunu göster
+        // İndir butonu
         document.getElementById("indirBtn").style.display = "inline-block";
 
-        // Sertifikaya otomatik kaydır
-        document.getElementById("sertifikaGoruntusu").scrollIntoView({
-            behavior: "smooth",
-            block: "start"
+        // Sayfayı en üste al
+        window.scrollTo({
+            top: 0,
+            behavior: "instant"
         });
 
     };
