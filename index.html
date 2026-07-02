@@ -47,8 +47,8 @@
 
         <p>
             Gizli Sandık'ın şifresini doğru çözerek
-            <strong>Temel İşlemler Dersi</strong> hazırlık çalışmalarını
-            başarıyla tamamladınız.
+            <strong>Temel İşlemler Dersi</strong>
+            hazırlık çalışmalarını başarıyla tamamladınız.
         </p>
 
         <p>
@@ -82,6 +82,27 @@
 
     <button onclick="sertifikaOlustur()">
         📄 Sertifikayı Oluştur
+    </button>
+
+</div>
+
+<!-- Oluşturulan Sertifika -->
+<div id="sertifikaGoruntusu"
+     style="display:none; text-align:center; margin-top:40px;">
+
+    <canvas
+        id="sertifikaCanvas"
+        width="2480"
+        height="1754"
+        style="max-width:100%; border-radius:12px; box-shadow:0 0 20px rgba(0,0,0,.2);">
+    </canvas>
+
+    <br><br>
+
+    <button
+        id="indirBtn"
+        style="display:none;">
+        📥 Sertifikayı İndir
     </button>
 
 </div>
