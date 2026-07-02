@@ -75,3 +75,68 @@ button:hover{
 .salla {
   animation: sallan 0.5s;
 }
+/* Tebrik penceresi */
+
+.popup{
+    display:none;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,.65);
+
+    justify-content:center;
+    align-items:center;
+}
+
+.popup-icerik{
+
+    width:90%;
+    max-width:600px;
+
+    background:white;
+    color:#222;
+
+    padding:35px;
+
+    border-radius:20px;
+
+    text-align:center;
+
+    box-shadow:0 0 35px rgba(0,0,0,.4);
+
+    animation:buyu .4s;
+}
+
+.popup-icerik h2{
+
+    color:#1b5e20;
+    margin-top:0;
+
+}
+
+.popup-icerik p{
+
+    font-size:20px;
+    line-height:1.7;
+
+}
+
+@keyframes buyu{
+
+from{
+
+transform:scale(.7);
+opacity:0;
+
+}
+
+to{
+
+transform:scale(1);
+opacity:1;
+
+}
+
+}
