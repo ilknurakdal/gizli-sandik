@@ -1,32 +1,38 @@
-function kontrol(){
+function kontrol() {
 
     let sifre = document.getElementById("sifre").value;
     let sandik = document.getElementById("sandik");
     let sonuc = document.getElementById("sonuc");
+    let kutu = document.getElementById("sifre");
+    let buton = document.querySelector("button");
 
-    if(sifre === "1234567"){
+    if (sifre === "1234567") {
 
         sandik.src = "sandik-acik.png";
-confetti({
-    particleCount: 250,
-    spread: 180,
-    origin: { y: 0.6 }
-});
+
+        confetti({
+            particleCount: 250,
+            spread: 180,
+            origin: { y: 0.6 }
+        });
+
         sonuc.style.color = "#7CFC00";
-        sonuc.innerHTML = "🎉 Tebrikler! Gizli Sandık açıldı.";
+        sonuc.innerHTML = `
+        <h2>🎉 Tebrikler!</h2>
+        <p>Gizli Sandık başarıyla açıldı.</p>
+        <p>Temel İşlemler Dersi hazırlık çalışmalarını başarıyla tamamladınız.</p>
+        `;
 
-    }else{
+        kutu.style.display = "none";
+        buton.style.display = "none";
 
-    sandik.src = "sandik-kapali.png";
-console.log("Salla sınıfı eklendi");
-    sandik.classList.add("salla");
+    } else {
 
-    setTimeout(function(){
-        sandik.classList.remove("salla");
-    }, 500);
+        sandik.src = "sandik-kapali.png";
 
-    sonuc.style.color = "#ff4040";
-    sonuc.innerHTML = "❌ Şifre yanlış.";
+        sonuc.style.color = "#ff4040";
+        sonuc.innerHTML = "❌ Şifre yanlış. Tekrar deneyiniz.";
 
-}
+    }
+
 }
