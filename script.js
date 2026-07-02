@@ -29,3 +29,4 @@ console.log("Salla sınıfı eklendi");
     sonuc.innerHTML = "❌ Şifre yanlış.";
 
 }
+}
