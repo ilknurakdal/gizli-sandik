@@ -17,12 +17,12 @@ function kontrol() {
         });
 
         sonuc.style.color = "#7CFC00";
-        sonuc.innerHTML = `
-        <h2>🎉 Tebrikler!</h2>
-        <p>Gizli Sandık başarıyla açıldı.</p>
-        <p>Temel İşlemler Dersi hazırlık çalışmalarını başarıyla tamamladınız.</p>
-        `;
+        sonuc.innerHTML = "🎉 Tebrikler! Gizli Sandık açıldı.";
 
+        // Tebrik penceresini göster
+        document.getElementById("tebrikKutusu").style.display = "flex";
+
+        // Şifre kutusu ve butonu gizle
         kutu.style.display = "none";
         buton.style.display = "none";
 
