@@ -42,6 +42,15 @@ function kapatPopup(event) {
 
     if (event.target.id === "tebrikKutusu") {
         document.getElementById("tebrikKutusu").style.display = "none";
+    } // Popup'ın dışına tıklanınca kapat
+const popup = document.getElementById("tebrikKutusu");
+
+popup.addEventListener("click", function (event) {
+
+    if (event.target === popup) {
+        popup.style.display = "none";
     }
+
+});
 
 }
