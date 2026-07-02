@@ -1,4 +1,4 @@
-function kontrol() {
+alert("Yeni script çalıştı");function kontrol() {
 
     let sifre = document.getElementById("sifre").value;
     let sandik = document.getElementById("sandik");
