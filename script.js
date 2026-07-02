@@ -36,3 +36,12 @@ function kontrol() {
     }
 
 }
+
+// Kararmış alana tıklanınca pencereyi kapat
+function kapatPopup(event) {
+
+    if (event.target.id === "tebrikKutusu") {
+        document.getElementById("tebrikKutusu").style.display = "none";
+    }
+
+}
