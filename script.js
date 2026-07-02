@@ -19,10 +19,8 @@ function kontrol() {
         sonuc.style.color = "#7CFC00";
         sonuc.innerHTML = "🎉 Tebrikler! Gizli Sandık açıldı.";
 
-        // Tebrik penceresini göster
         document.getElementById("tebrikKutusu").style.display = "flex";
 
-        // Şifre kutusu ve butonu gizle
         kutu.style.display = "none";
         buton.style.display = "none";
 
@@ -37,43 +35,34 @@ function kontrol() {
 
 }
 
-// Kararmış alana tıklanınca pencereyi kapat
-function kapatPopup(event) {
+// Kararmış alana tıklayınca popup kapansın
+document.getElementById("tebrikKutusu").addEventListener("click", function(event){
 
-    if (event.target.id === "tebrikKutusu") {
-        document.getElementById("tebrikKutusu").style.display = "none";
-    } // Popup'ın dışına tıklanınca kapat
-const popup = document.getElementById("tebrikKutusu");
-
-popup.addEventListener("click", function (event) {
-
-    if (event.target === popup) {
-        popup.style.display = "none";
+    if(event.target === this){
+        this.style.display = "none";
     }
 
 });
 
-}
+// Sertifika ekranına geç
 function sertifikayaGec(){
 
     document.getElementById("tebrikKutusu").style.display = "none";
-
     document.getElementById("sertifikaAlani").style.display = "block";
 
 }
 
+// Şimdilik test
 function sertifikaOlustur(){
 
-    let ad=document.getElementById("ad").value;
-    let soyad=document.getElementById("soyad").value;
+    let ad = document.getElementById("ad").value;
+    let soyad = document.getElementById("soyad").value;
 
-    if(ad==="" || soyad===""){
-
+    if(ad === "" || soyad === ""){
         alert("Lütfen adınızı ve soyadınızı giriniz.");
         return;
-
     }
 
-    alert(ad+" "+soyad+"\n\nSertifika bir sonraki adımda oluşturulacak.");
+    alert(ad + " " + soyad + "\n\nSertifika oluşturma aşamasına geçiyoruz.");
 
 }
